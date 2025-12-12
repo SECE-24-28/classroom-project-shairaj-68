@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>slide Viewer</title>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: beige;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    .viewer {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slide {
+        display: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    #s1:checked ~ .slides .slide1,
+    #s2:checked ~ .slides .slide2,
+{        display: block;}        display: block;
+    
+
+    .nav {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav label {
+        padding: 10px 20px;
+        background: #00000050;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 5px;
+        user-select: none;
+        transition: 0.2s;
+    }
+
+    .nav label:hover {
+        background: #00000080;
+    }
+
+</style>
+</head>
+<body>
+
+<div class="viewer">
+    
+    <input type="radio" name="slider" id="s1" checked>
+    <input type="radio" name="slider" id="s2">
+  
+    
+    <div class="slides">
+        <div class="slide slide1">
+            <img src="C:\Users\shair\OneDrive\Pictures\us4.jpeg">
+        </div>
+        <div class="slide slide2">
+            <img src="C:\Users\shair\OneDrive\Pictures\IMG_9270[1].PNG">
+        </div>
+        
+    </div>
+
+    
+    <div class="nav">
+        <label for="s1">&#10094; Previous</label>
+        <label for="s2">Next &#10095;</label>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "students": [
+    {
+      "id": "S001",
+      "firstName": "Bhavik",
+      "lastName": "Taneja",
+      "fullName": "Bhavik Taneja",
+      "age": 15,
+      "class": "10"
+     
+      
+    },
+    {
+      "id": "S002",
+      "firstName": "Bharat",
+      "lastName": "Badera",
+      "fullName": "Bharat Badera",
+      "age": 14,
+      "class": "9"
+     
+    },
+    {
+      "id": "S003",
+      "firstName": "Ananya",
+      "lastName": "Sharma",
+      "fullName": "Ananya Sharma",
+      "age": 16,
+      "class": "11"
+      
+    }
+  ]
+}

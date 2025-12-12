@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-group {
+            margin-bottom: 12px;
+        }
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <form>
+        
+        <div class="form-group">
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name">
+        </div>
+
+      
+        <div class="form-group">
+            <label for="address">Address</label><br>
+            <textarea id="address" name="address" rows="3" cols="30"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Languages known:</label><br>
+
+            <div id="languages-container">
+                <label>
+                    <input type="checkbox" name="languages" value="C"> C
+                </label>
+                <label>
+                    <input type="checkbox" name="languages" value="C++"> C++
+                </label>
+                <label>
+                    <input type="checkbox" name="languages" value="Python"> Python
+                </label>
+                <label>
+                    <input type="checkbox" name="languages" value="Java"> Java
+                </label>
+            </div>
+            <br>
+            <input type="text" id="newLanguage" placeholder="Add new language">
+            <button type="button" onclick="addLanguage()">Add Language</button>
+        </div>
+
+        <div class="form-group">
+            <label>Gender:</label><br>
+            <label>
+                <input type="radio" name="gender" value="Male"> Male
+            </label><br>
+            <label>
+                <input type="radio" name="gender" value="Female"> Female
+            </label><br>
+            <label>
+                <input type="radio" name="gender" value="Transgender"> Transgender
+            </label>
+        </div>
+
+        <div class="form-group">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    <script>
+        function addLanguage() {
+            const input = document.getElementById('newLanguage');
+            const langName = input.value.trim();
+            if (!langName) {
+                alert('Please enter a language name.');
+                return;
+            }
+
+            const container = document.getElementById('languages-container');
+
+            const label = document.createElement('label');
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.name = 'languages';
+            checkbox.value = langName;
+
+            label.appendChild(checkbox);
+            label.appendChild(document.createTextNode(' ' + langName));
+
+            container.appendChild(label);
+
+            input.value = '';
+        }
+    </script>
+
+</body>
+</html>

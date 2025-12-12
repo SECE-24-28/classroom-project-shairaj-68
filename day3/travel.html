@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin:0px;
+        }
+        ol{
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+           
+        }
+        li,h1{
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            margin: 10px;
+            font-size: 1.5rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+            
+            
+        }
+        h1{
+            font-size: 3rem;
+        }
+        
+        nav{
+            position: fixed;
+            background: fixed;
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            
+            
+        }
+        video{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: -1;
+            top: 0%;
+            left: 0%;
+            object-fit: cover;
+        }
+        button
+        {
+           padding: 10px;
+           bottom: 5%;
+           position: fixed;
+           left: 30px;
+           
+           background-color: rgb(0, 0, 0);
+           color: rgb(255, 255, 255);
+           border-radius: 10px;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .box{
+            
+            top: 500px;
+            color: rgb(0, 0, 0);
+            border-radius: 10px;
+            width: 500px;
+        }
+        .p{
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            margin: 10px;
+            font-size: 1.5rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+            
+         }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Soccer</h1>
+        <ol>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Gallery</li>
+        </ol>
+    </nav>
+    <video src="C:\Users\shair\Videos\Recording 2025-12-03 092716.mp4" autoplay loop></video>
+    <button>
+        About Us
+    </button>
+    <div class="container">
+
+    <div class="box">
+        <h3>Soccer</h3>
+        <p>Soccer, also known as association football, is a team sport played between two teams of 11 players each. The objective is to score goals by maneuvering a spherical ball into the opposing team's net, using any part of the body except the hands and arms.</p>
+    </div>
+    </div>
+</body>
+</html>

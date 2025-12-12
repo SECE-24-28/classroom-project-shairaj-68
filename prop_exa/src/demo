@@ -1,0 +1,98 @@
+  /*import { useEffect, useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+import Header from './Header';
+import { Body } from './Body';
+import { Footer } from './Footer';
+
+function App() 
+{
+      const [newName, setNewName] = useState("");
+      const [list,setList] =useState([
+        {id:1,sname:"Tharun",fee:true},
+        {id:2,sname:"Vedhu",fee:false},
+        {id:3,sname:"Yokesh",fee:true},
+        {id:4,sname:"Vimal",fee:false}
+      ]);
+  const [search, setSearch] = useState("")
+
+  const filteredList = list.filter((student) =>
+    student.sname.toLowerCase().includes(search.toLowerCase())
+  )
+
+
+
+      const handleDelete=(id)=>
+      {
+      const newList=list.filter((ls)=>ls.id!=id)
+      setList(newList)
+      }
+      const handleCheck=(id)=>
+      {
+         const newList=list.map((ls)=>(ls.id===id)?({...ls,fee:!ls.fee}):(ls))
+         setList(newList)
+      }
+        const handleAddStudent = () => {
+    if (newName.trim() === "") {
+      alert("saerch student name")
+      return
+    }
+    const newStudent = {
+      id: list.length > 0 ? Math.max(...list.map(s => s.id)) + 1 : 1,
+      sname: newName,
+      fee: false
+    }
+    setList([...list, newStudent])
+    setNewName("")
+  }
+ 
+  useEffect(() =>
+  {
+    const temlist=[  {id:1,sname:"Tharun",fee:true},
+        {id:2,sname:"Vedhu",fee:false},
+        {id:3,sname:"Yokesh",fee:true},
+        {id:4,sname:"Vimal",fee:false}
+      ]
+      setList(temlist)
+  },[]
+)
+  
+    
+  return (
+    <>
+       
+        <Header title={"Student List"}/>
+         <div className="add-student">
+        <input
+          type="text"
+          value={newName}
+          onChange={(e) => setNewName(e.target.value)}
+          placeholder="Enter student name"
+          onKeyPress={(e) => e.key === "Enter" && handleAddStudent()}
+        />
+        <button onClick={handleAddStudent}>Add Student</button>
+      </div>
+        <div className="search-bar">
+        <input
+          type="text"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          placeholder="Search student by name"
+        />
+      </div>
+
+
+        <Body list={filteredList}
+              handleCheck={handleCheck}
+              handleDelete={handleDelete}
+        />
+           <Footer len={filteredList.length} />
+    </>
+  )
+}
+
+export default App
+
+
+*/
